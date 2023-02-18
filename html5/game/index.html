@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Screen</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div id="wrapper" class="wrapper">
+        <div id="game_container" class="game-container">
+            <canvas id="game_canvas" class="game-canvas game-layer" height="270" width="420"></canvas>
+        </div>
+
+        <div id="score_screen" class="score-screen game-layer">
+            <img src="" alt="" id="togglemusic">
+            <img src="" alt="">
+            <span id="score" class="score"></span>
+        </div>
+
+        <div id="game_start_screen" class="game-start-screen game-layer">
+            <img src="" alt="">
+            <img src="./assets/images/play_btn.png" width="75" height="75" alt="">
+        </div>
+
+        <div id="level_select_screen" class="level-select-screen"></div>
+
+        <div id="loading_screen" class="loading-screen game-layer">
+            <div id="loading_message" class="loading-message"></div>
+        </div>
+
+        <div id="ending_screen" class="ending-screen game-layer">
+            <p id="ending_message" class="ending-message">The Level Is Over</p>
+
+            <p id="play_current_level" class="play-current-level ending-option">
+                <img src="./assets/images/play_btn.png" width="75" height="75" alt="Replay"> 
+                Replay Current Level
+            </p>
+            <p id="play_next_level" class="play-next-level ending-option">
+                <img src="./assets/images/next_btn.png" width="70" height="70" alt="Next">
+                Play Next Level
+            </p>
+            <p id="return_to_level_screen" class="return-to-level-screen ending-option">
+                <img src="./assets/images/back_btn.png" width="70" height="70" alt="Return">
+                Replay Current Level Screen
+            </p>
+        </div>
+    </div>
+  <script src="./game.js"></script>
+</body>
+</html>
