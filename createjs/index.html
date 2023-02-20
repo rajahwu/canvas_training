@@ -10,11 +10,26 @@
     <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script></head>
 </head>
 <body onload="init()">
+    <a href="./animation_and_ticker/index.html">Animation and Ticker</a>
     <canvas id="demoCanvas" width="500" height="300"></canvas>
-    <button onclick="playSound()" class="playSound">Play Sound</button>
+    <button onclick="playSound()" class="play-sound-btn">Play Sound</button>
+    <button onclick="loadImage()" class="load-image-btn">Load Image</button>
     <script>
+       
+
+
         window.addEventListener('load', loadSound)
         const soundId = 'HugeHit';
+
+        function loadImage() {
+            const preload = new createjs.LoadQueue();
+            preload.addEventListener('fileload', handleFileComplete);
+            preload.loadFile('./preloadjs-bg-center.jpg');
+        }
+
+        function handleFileComplete(e) {
+            document.body.appendChild(e.result)
+        }
 
         function loadSound() {
             createjs.Sound.registerSound('./huge_hit.mp3', soundId)
@@ -44,8 +59,7 @@
                 createjs.Ticker.setFPS(60);
                 createjs.Ticker.addEventListener('tick', stage);
         }
-
-
+        
     </script>
 </body>
 </html>
